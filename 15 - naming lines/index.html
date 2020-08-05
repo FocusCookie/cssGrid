@@ -34,8 +34,14 @@
       .container {
         display: grid;
         grid-gap: 20px;
-        grid-template-columns: repeat(5, 1fr);
-        border: 10px solid var(--yellow); /* best colour */
+        grid-template-columns: [left] 1fr [left-center] 1fr [center] 1fr [right-center] 1fr [right];
+        grid-template-rows: [top] repeat(3, auto) [bottom];
+      }
+
+      .item2 {
+        background-color: aqua;
+        grid-column: left-center / right-center;
+        grid-row: top / bottom;
       }
     </style>
   </body>

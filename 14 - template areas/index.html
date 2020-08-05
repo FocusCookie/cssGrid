@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <title>Starter Files and Tooling Setup!</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item item1"><p>I'm Sidebar!</p></div>
+      <div class="item item2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          rerum quo distinctio, obcaecati illo alias ad pariatur perspiciatis
+          fugiat?
+        </p>
+      </div>
+      <div class="item item3">I'm Sidebar #2</div>
+      <div class="item footer">I'm the footer</div>
+    </div>
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 500px 1fr;
+
+        grid-template-areas:
+          "sidebar-1  content   sidebar-2"
+          "sidebar-1  content   sidebar-2"
+          "footer     footer    footer";
+      }
+
+      .item1 {
+        grid-area: sidebar-1;
+      }
+
+      .item2 {
+        grid-area: content;
+      }
+
+      .item3 {
+        grid-area: sidebar-2;
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+    </style>
+  </body>
+</html>
